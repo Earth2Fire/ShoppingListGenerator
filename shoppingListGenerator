@@ -1,0 +1,24 @@
+import random
+
+numberMeals = [0]
+numberMeals[0] = "Egg Salad Sandwiches & Vegetables"
+numberMeals.append("Bagged Salads & Tofu/Chicken")
+numberMeals.append("Pasta Primavera & Chik'n/Chicken")
+numberMeals.append("Nachos w Beans/Hamburger")
+numberMeals.append("Hamburgers & Vegetables")
+numberMeals.append("Scrambles")
+numberMeals.append("Dumplings & Vegetables")
+numberMeals.append("Vegetable Masala & Rice w/ Chickpeas/Chicken")
+numberMeals.append("Pizza")
+numberMeals.append("Soups w/ Vegetables & Crackers")
+numberMeals.append("Zoodles & Chik'n/Chicken")
+
+
+mealCount = 0
+while mealCount < 5:
+    mealCount = mealCount + 1
+    length = len(numberMeals) - 1
+    mealChoice = random.randint(0, length)
+    print(numberMeals[mealChoice])
+    del numberMeals[mealChoice]
+
