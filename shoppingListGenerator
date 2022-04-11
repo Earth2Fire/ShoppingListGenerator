@@ -1,24 +1,59 @@
 import random
 
 numberMeals = [0]
+shoppingList = [0]
 numberMeals[0] = "Egg Salad Sandwiches & Vegetables"
+shoppingList[0] = "Eggs Onion Celery Bread Veggy Mayo"
 numberMeals.append("Bagged Salads & Tofu/Chicken")
+shoppingList.append("Salad Tofu Chicken")
 numberMeals.append("Pasta Primavera & Chik'n/Chicken")
+shoppingList.append("Pasta Veggies TomSauce Chik'n Chicken")
 numberMeals.append("Nachos w Beans/Hamburger")
+shoppingList.append("Chips Beans Onion Salsa Hamburger Cheese")
 numberMeals.append("Hamburgers & Vegetables")
+shoppingList.append("ImposBurger Hamburger Buns Onion Pickle Condiments Veggy")
 numberMeals.append("Scrambles")
+shoppingList.append("Eggs Potato Veggy Onion Jalepeno")
 numberMeals.append("Dumplings & Vegetables")
+shoppingList.append("Dumplings Veggy")
 numberMeals.append("Vegetable Masala & Rice w/ Chickpeas/Chicken")
+shoppingList.append("Veggy Masala_Sauce Rice Chickpeas Chicken")
 numberMeals.append("Pizza")
+shoppingList.append("Crust Cheese TomSauce Peppers Sausage Onion")
 numberMeals.append("Soups w/ Vegetables & Crackers")
+shoppingList.append("Soup Veggy Crackers")
 numberMeals.append("Zoodles & Chik'n/Chicken")
+shoppingList.append("Zuchinni TomSauce Chik'n Chicken")
 
-
+ingredients = [0,1,2,3,4]
 mealCount = 0
 while mealCount < 5:
-    mealCount = mealCount + 1
+
     length = len(numberMeals) - 1
     mealChoice = random.randint(0, length)
     print(numberMeals[mealChoice])
+    ingredients[mealCount] = shoppingList[mealChoice].split()
     del numberMeals[mealChoice]
+    del shoppingList[mealChoice]
+    mealCount = mealCount + 1
+
+sortIngredients = 0
+listIngredients = []
+while sortIngredients < 5:
+    lengSort = len(ingredients[sortIngredients])
+    x = 0
+    while x < lengSort:
+        listIngredients.append(ingredients[sortIngredients][x])
+        x = x + 1
+    sortIngredients = sortIngredients + 1
+
+print(" ")
+listIngredients.sort()
+x = 0   
+while x < len(listIngredients) - 1:
+    x = x + 1
+    print(listIngredients[x])
+
+
+
 
