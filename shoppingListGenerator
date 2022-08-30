@@ -1,5 +1,7 @@
 import random
 
+#Need SQL features added, as well as integration with Target grocery via doordash
+
 numberMeals = [0]
 shoppingList = [0]
 numberMeals[0] = "Egg Salad Sandwiches & Vegetables"
